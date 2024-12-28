@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e8c8df;
+            color: black;
+        }
+        .container{
+            margin-top: -120px;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-image {
+            height: 280px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .product-price {
+            color: black;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+        .section-heading {
+            color: #d81b60;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 120px;
+        }
+        .custom-btn {
+            background-color: #d81b60;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 25px;
+        }
+        .custom-btn:hover {
+            background-color: #ad1457;
+            color: white;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        .sale-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: #d81b60;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section-heading">
+            <h1>Personalized Gifts</h1>
+            <p class="text-white">Custom-made gifts that light up their world</p>
+        </div>
+    
+        <div class="row">
+            <!-- Product 1: LED Lamp -->
+            <div class="col-md-3">
+                <div class="product-card">
+                    <div class="position-relative">
+                        <img src="/Personalized_gifts/images/image1.webp" class="product-image" alt="LED Lamp">
+                        <span class="sale-badge">Bestseller</span>
+                    </div>
+                    <div class="card-body">
+                        <h5><a href="../Birthday_gifts/name_on_rice.html">3D LED Name Lamp</a></h5>
+                        <p class="text-muted">Custom name with multicolor LED base</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="product-price">₹1499</span>
+                            <button class="custom-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Product 2: Custom Bottles -->
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="/Personalized_gifts/images/image2.webp" class="product-image" alt="Custom Bottles">
+                    <div class="card-body">
+                        <h5><a href="../Birthday_gifts/name_on_rice.html">Engraved Steel Bottle</a></h5>
+                        <p class="text-muted">Personalized vacuum insulated bottle</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="product-price">₹999</span>
+                            <button class="custom-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Product 3: Whiskey Glass Set -->
+            <div class="col-md-3">
+                <div class="product-card">
+                    <div class="position-relative">
+                        <img src="/Personalized_gifts/images/image3.webp" class="product-image" alt="Whiskey Glass Set">
+                        <span class="sale-badge">Premium</span>
+                    </div>
+                    <div class="card-body">
+                        <h5><a href="../Birthday_gifts/name_on_rice.html">Custom Whiskey Set</a></h5>
+                        <p class="text-muted">Engraved crystal glasses with wooden box</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="product-price">₹2499</span>
+                            <button class="custom-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Product 4: Cuddle Cushion -->
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="/Personalized_gifts/images/image4.webp" class="product-image" alt="Cuddle Cushion">
+                    <div class="card-body">
+                        <h5><a href="../Birthday_gifts/name_on_rice.html">Cuddles Cushion</a></h5>
+                        <p class="text-muted">Photo printed memory cushion</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="product-price">₹799</span>
+                            <button class="custom-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Product 5: Night Light -->
+            <div class="col-md-3">
+                <div class="product-card">
+                    <div class="position-relative">
+                        <img src="/Personalized_gifts/images/image5.webp" class="product-image" alt="Night Light">
+                        <span class="sale-badge">New</span>
+                    </div>
+                    <div class="card-body">
+                        <h5><a href="../Birthday_gifts/name_on_rice.html">Glow Up Night Light</a></h5>
+                        <p class="text-muted">Custom photo night lamp with remote</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="product-price">₹1299</span>
+                            <button class="custom-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Product 6: Hanging Photo -->
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="/Personalized_gifts/images/image6.webp" class="product-image" alt="Hanging Photo">
+                    <div class="card-body">
+                        <h5><a href="../Birthday_gifts/name_on_rice.html">LED Photo String</a></h5>
+                        <p class="text-muted">Illuminated hanging photo display</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="product-price">₹899</span>
+                            <button class="custom-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Product 7: Caricature -->
+            <div class="col-md-3">
+                <div class="product-card">
+                    <div class="position-relative">
+                        <img src="/Personalized_gifts/images/image7.webp" class="product-image" alt="Skater Caricature">
+                        <span class="sale-badge">Trending</span>
+                    </div>
+                    <div class="card-body">
+                        <h5><a href="../Birthday_gifts/name_on_rice.html">Skater Boy Caricature</a></h5>
+                        <p class="text-muted">Custom digital art with frame</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="product-price">₹1999</span>
+                            <button class="custom-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Product 8: Glow Write Lamp -->
+            <div class="col-md-3">
+                <div class="product-card">
+                    <div class="position-relative">
+                        <img src="/Personalized_gifts/images/image8.webp" class="product-image" alt="Glow Write Lamp">
+                        <span class="sale-badge">Popular</span>
+                    </div>
+                    <div class="card-body">
+                        <h5><a href="../Birthday_gifts/name_on_rice.html">Glow & Write Lamp</a></h5>
+                        <p class="text-muted">LED lamp with writable surface</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="product-price">₹1699</span>
+                            <button class="custom-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

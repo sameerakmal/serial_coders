@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e8c8df;
+            color: black;
+        }
+        .container {
+            margin-top: -120px;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-image {
+            height: 280px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .product-price {
+            color: black;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+        .section-heading {
+            color: #d81b60;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 120px;
+        }
+        .custom-btn {
+            background-color: #d81b60;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 25px;
+        }
+        .custom-btn:hover {
+            background-color: #ad1457;
+            color: white;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .navbar-brand img {
+            height: 50px;
+            margin-left: -50px;
+            margin-right: 40px;
+        }
+        .search-input {
+            width: 400px;
+            border-radius: 20px;
+            padding-left: 35px;
+        }
+        .search-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6c757d;
+        }
+        .nav-icon {
+            font-size: 1.2rem;
+            color: #6c757d;
+        }
+        .cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            font-size: 0.7rem;
+        }
+        .profile-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: none;
+            min-width: 200px;
+            z-index: 1000;
+        }
+        .profile-dropdown.show {
+            display: block;
+        }
+        .profile-dropdown a {
+            display: block;
+            padding: 10px 20px;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .profile-dropdown a:hover {
+            background-color: #f8f9fa;
+        }
+        .faq-container {
+            width: 90%;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        .faq-question {
+            background-color: #d81b60;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+        }
+        .faq-answer {
+            padding: 12px;
+            font-size: 14px;
+            display: none;
+        }
+        .faq-answer.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-purple" href="#">
+                <img src="/api/placeholder/50/50" alt="Logo">
+            </a>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Your existing navbar items -->
+                
+                <div class="icons d-flex align-items-center gap-4">
+                    <div class="position-relative">
+                        <i class="fas fa-user nav-icon" id="profileIcon"></i>
+                        <div class="profile-dropdown" id="profileDropdown">
+                            <a href="#login">Login</a>
+                            <a href="#register">Register</a>
+                        </div>
+                    </div>
+                    <a href="#" class="position-relative">
+                        <i class="fas fa-heart nav-icon"></i>
+                    </a>
+                    <a href="#" class="position-relative">
+                        <i class="fas fa-shopping-cart nav-icon"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge">
+                            5
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container mt-5 pt-5">
+        <h2 class="section-heading">Festival Gifts</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="/api/placeholder/280/280" alt="Diwali Gifts" class="product-image">
+                    <div class="card-body">
+                        <h5>Diwali Gifts</h5>
+                        <p class="product-price">₹1,499</p>
+                        <button class="custom-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="/api/placeholder/280/280" alt="Christmas Gifts" class="product-image">
+                    <div class="card-body">
+                        <h5>Christmas Gifts</h5>
+                        <p class="product-price">₹1,299</p>
+                        <button class="custom-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="/api/placeholder/280/280" alt="Holi Gifts" class="product-image">
+                    <div class="card-body">
+                        <h5>Holi Gifts</h5>
+                        <p class="product-price">₹999</p>
+                        <button class="custom-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="/api/placeholder/280/280" alt="Raksha Bandhan Gifts" class="product-image">
+                    <div class="card-body">
+                        <h5>Raksha Bandhan</h5>
+                        <p class="product-price">₹799</p>
+                        <button class="custom-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Profile Dropdown Toggle
+        document.getElementById('profileIcon').addEventListener('click', function(e) {
+            e.stopPropagation();
+            document.getElementById('profileDropdown').classList.toggle('show');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            const dropdown = document.getElementById('profileDropdown');
+            if (!e.target.closest('#profileIcon') && dropdown.classList.contains('show')) {
+                dropdown.classList.remove('show');
+            }
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e8c8df;
+            color: black;
+        }
+        .container {
+            margin-top: -120px;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .product-image {
+            border-radius: 15px;
+            height: 500px;
+            object-fit: cover;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .product-price {
+            color: #d81b60;
+            font-weight: 700;
+            font-size: 2rem;
+        }
+        .section-heading {
+            color: #d81b60;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 120px;
+        }
+        .custom-btn {
+            background-color: #d81b60;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+        .custom-btn:hover {
+            background-color: #ad1457;
+            color: white;
+        }
+        .quantity-input {
+            width: 100px;
+            text-align: center;
+            border: 2px solid #d81b60;
+            border-radius: 25px;
+            padding: 8px;
+            margin: 0 10px;
+        }
+        .feature-icon {
+            color: #d81b60;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .tab-content {
+            padding: 20px;
+            background: white;
+            border-radius: 0 0 15px 15px;
+        }
+        .nav-tabs .nav-link {
+            color: #d81b60;
+            border: none;
+            padding: 15px 30px;
+            font-weight: 500;
+        }
+        .nav-tabs .nav-link.active {
+            color: white;
+            background-color: #d81b60;
+            border-radius: 15px 15px 0 0;
+        }
+        .specifications li {
+            margin: 10px 0;
+        }
+        .sale-badge {
+            background-color: #d81b60;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section-heading">
+            <h1>Name on Rice</h1>
+            <p class="text-muted">Microscopic name carving on rice grain</p>
+        </div>
+
+        <div class="product-card">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="/Birthday_gifts/images/birthday_gifts/image1.webp" class="product-image" alt="Name on Rice">
+                </div>
+                <div class="col-md-6">
+                    <span class="sale-badge">Bestseller</span>
+                    <h2>Personalized Name on Rice Necklace</h2>
+                    <div class="product-price mb-3">₹499</div>
+                    <p class="text-muted">A unique piece of art where your name is carefully inscribed on a single grain of rice, preserved forever in a glass vial pendant.</p>
+                    
+                    <div class="my-4">
+                        <h5>Select Necklace Type:</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="necklaceType" checked>
+                            <label class="form-check-label">Silver Chain (+₹0)</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="necklaceType">
+                            <label class="form-check-label">Gold Plated Chain (+₹100)</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Enter Name to be Inscribed:</label>
+                        <input type="text" class="form-control" placeholder="Maximum 15 characters">
+                    </div>
+
+                    <div class="d-flex align-items-center mb-4">
+                        <label class="me-3">Quantity:</label>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                    </div>
+
+                    <button class="custom-btn me-2"><i class="fas fa-shopping-cart me-2"></i>Add to Cart</button>
+                    <button class="custom-btn"><i class="fas fa-heart me-2"></i>Add to Wishlist</button>
+
+                    <div class="mt-4">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-truck feature-icon"></i>
+                            <span>Free shipping on orders above ₹999</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-undo feature-icon"></i>
+                            <span>7-day return policy</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-shield-alt feature-icon"></i>
+                            <span>Secure payment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#description">Description</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#specifications">Specifications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#reviews">Reviews</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="description">
+                    <h4>Product Description</h4>
+                    <p>Our Name on Rice necklace is a unique and personal piece of jewelry that captures your name or a special message on a single grain of rice. Each piece is carefully crafted by our skilled artisans using microscopic engraving techniques.</p>
+                    <p>The rice grain is preserved in a crystal-clear glass vial filled with mineral oil and sealed to ensure longevity. The vial comes with your choice of a sterling silver or gold-plated chain.</p>
+                    <h5>Package Includes:</h5>
+                    <ul>
+                        <li>Personalized rice grain with your chosen name/message</li>
+                        <li>Glass vial with mineral oil</li>
+                        <li>Chain (Silver or Gold-plated)</li>
+                        <li>Luxury gift box</li>
+                        <li>Care instructions</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="specifications">
+                    <h4>Product Specifications</h4>
+                    <ul class="specifications">
+                        <li><strong>Vial Size:</strong> 2.5cm x 0.8cm</li>
+                        <li><strong>Chain Length:</strong> 18 inches (adjustable)</li>
+                        <li><strong>Material:</strong> Glass vial, Sterling silver/Gold-plated chain</li>
+                        <li><strong>Maximum Characters:</strong> 15</li>
+                        <li><strong>Processing Time:</strong> 2-3 business days</li>
+                        <li><strong>Shipping Time:</strong> 3-5 business days</li>
+                        <li><strong>Warranty:</strong> 6 months against manufacturing defects</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="reviews">
+                    <h4>Customer Reviews</h4>
+                    <div class="mb-4">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <span class="ms-2">4.8 out of 5</span>
+                        </div>
+                        <p>Based on 256 reviews</p>
+                    </div>
+                    <!-- Sample Review -->
+                    <div class="mb-3 pb-3 border-bottom">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <span class="ms-2 fw-bold">Beautiful and Unique!</span>
+                        </div>
+                        <p class="mb-1">The detail is amazing and the necklace is beautiful. Makes for a perfect gift!</p>
+                        <small class="text-muted">By Priya S. - 2 weeks ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

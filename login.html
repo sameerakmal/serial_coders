@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <title>Login - D2C Store</title>
+    <style>
+        body {
+            height: 100vh;
+            background-color: #e8c8df;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-container {
+            background-color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .form-control:focus {
+            border-color: #d81b60;
+            box-shadow: 0 0 0 0.2rem rgba(216, 27, 96, 0.25);
+        }
+        .custom-btn {
+            background-color: #d81b60;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        .custom-btn:hover {
+            background-color: #ad1457;
+            color: white;
+            transform: translateY(-2px);
+        }
+        .input-group-text {
+            background-color: #d81b60;
+            color: white;
+            border: none;
+        }
+        .login-header {
+            color: #d81b60;
+            margin-bottom: 1.5rem;
+        }
+        .form-floating > label {
+            color: #666;
+        }
+        .form-check-input:checked {
+            background-color: #d81b60;
+            border-color: #d81b60;
+        }
+        .link {
+            color: #d81b60;
+            text-decoration: none;
+        }
+        .link:hover {
+            color: #ad1457;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2 class="text-center login-header">Welcome Back!</h2>
+        <form id="loginForm" onsubmit="handleLogin(event)">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                <label for="email">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="password" placeholder="Password" 
+                       minlength="4" maxlength="16" required>
+                <label for="password">Password</label>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">
+                        Remember me
+                    </label>
+                </div>
+                <a href="#" class="link">Forgot password?</a>
+            </div>
+            <button type="submit" class="custom-btn w-100 mb-3">Login</button>
+            <p class="text-center mb-0">
+                New to D2C Store? 
+                <a href="register.html" class="link">Create an account</a>
+            </p>
+        </form>
+    </div>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Email validation
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            // Password validation
+            if (password.length < 4) {
+                alert('Password must be at least 4 characters long');
+                return;
+            }
+            
+            // Here you would typically make an API call to authenticate
+            // For demo purposes, we'll just redirect to the home page
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

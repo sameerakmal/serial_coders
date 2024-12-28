@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e8c8df;
+            color: black;
+        }
+        .container {
+            margin-top: -120px;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .product-image {
+            border-radius: 15px;
+            height: 500px;
+            object-fit: cover;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .product-price {
+            color: #d81b60;
+            font-weight: 700;
+            font-size: 2rem;
+        }
+        .section-heading {
+            color: #d81b60;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 120px;
+        }
+        .custom-btn {
+            background-color: #d81b60;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+        .custom-btn:hover {
+            background-color: #ad1457;
+            color: white;
+        }
+        .quantity-input {
+            width: 100px;
+            text-align: center;
+            border: 2px solid #d81b60;
+            border-radius: 25px;
+            padding: 8px;
+            margin: 0 10px;
+        }
+        .feature-icon {
+            color: #d81b60;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .tab-content {
+            padding: 20px;
+            background: white;
+            border-radius: 0 0 15px 15px;
+        }
+        .nav-tabs .nav-link {
+            color: #d81b60;
+            border: none;
+            padding: 15px 30px;
+            font-weight: 500;
+        }
+        .nav-tabs .nav-link.active {
+            color: white;
+            background-color: #d81b60;
+            border-radius: 15px 15px 0 0;
+        }
+        .specifications li {
+            margin: 10px 0;
+        }
+        .sale-badge {
+            background-color: #d81b60;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section-heading">
+            <h1>Name Pendant</h1>
+            <p class="text-muted">Custom engraved silver pendant</p>
+        </div>
+
+        <div class="product-card">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="/Birthday_gifts/images/birthday_gifts/image2.webp" class="product-image" alt="Custom Name Pendant">
+                </div>
+                <div class="col-md-6">
+                    <span class="sale-badge">New Arrival</span>
+                    <h2>Personalized Name Pendant</h2>
+                    <div class="product-price mb-3">₹899</div>
+                    <p class="text-muted">Express your individuality with our expertly crafted name pendant, featuring your chosen name or message in elegant calligraphy on premium sterling silver.</p>
+                    
+                    <div class="my-4">
+                        <h5>Select Font Style:</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="fontStyle" checked>
+                            <label class="form-check-label">Classic Script (+₹0)</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="fontStyle">
+                            <label class="form-check-label">Modern Calligraphy (+₹100)</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Enter Name to be Engraved:</label>
+                        <input type="text" class="form-control" placeholder="Maximum 12 characters">
+                    </div>
+
+                    <div class="d-flex align-items-center mb-4">
+                        <label class="me-3">Quantity:</label>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                    </div>
+
+                    <button class="custom-btn me-2"><i class="fas fa-shopping-cart me-2"></i>Add to Cart</button>
+                    <button class="custom-btn"><i class="fas fa-heart me-2"></i>Add to Wishlist</button>
+
+                    <div class="mt-4">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-truck feature-icon"></i>
+                            <span>Free shipping on orders above ₹999</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-undo feature-icon"></i>
+                            <span>14-day return policy</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-shield-alt feature-icon"></i>
+                            <span>Secure payment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#description">Description</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#specifications">Specifications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#reviews">Reviews</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="description">
+                    <h4>Product Description</h4>
+                    <p>Our Custom Name Pendant is a stunning piece of personalized jewelry that transforms your name into a wearable work of art. Each pendant is meticulously crafted by our skilled artisans using premium sterling silver and precise engraving techniques.</p>
+                    <p>The pendant features your chosen name or message in either classic script or modern calligraphy, creating a timeless piece that's uniquely yours. The high-polish finish ensures your pendant catches the light beautifully from every angle.</p>
+                    <h5>Package Includes:</h5>
+                    <ul>
+                        <li>Custom engraved sterling silver pendant</li>
+                        <li>18-inch sterling silver chain</li>
+                        <li>Premium jewelry box</li>
+                        <li>Authentication certificate</li>
+                        <li>Care instructions</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="specifications">
+                    <h4>Product Specifications</h4>
+                    <ul class="specifications">
+                        <li><strong>Pendant Size:</strong> 3.0cm x 1.2cm</li>
+                        <li><strong>Chain Length:</strong> 18 inches (adjustable)</li>
+                        <li><strong>Material:</strong> 925 Sterling Silver</li>
+                        <li><strong>Maximum Characters:</strong> 12</li>
+                        <li><strong>Processing Time:</strong> 3-4 business days</li>
+                        <li><strong>Shipping Time:</strong> 2-3 business days</li>
+                        <li><strong>Warranty:</strong> 1 year against manufacturing defects</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="reviews">
+                    <h4>Customer Reviews</h4>
+                    <div class="mb-4">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half text-warning"></i>
+                            <span class="ms-2">4.5 out of 5</span>
+                        </div>
+                        <p>Based on 128 reviews</p>
+                    </div>
+                    <div class="mb-3 pb-3 border-bottom">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <span class="ms-2 fw-bold">Absolutely Perfect!</span>
+                        </div>
+                        <p class="mb-1">The engraving is so precise and beautiful. The silver quality is excellent, and it came in such elegant packaging. Worth every penny!</p>
+                        <small class="text-muted">By Rahul M. - 1 week ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

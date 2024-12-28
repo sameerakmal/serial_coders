@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .navbar-brand img {
+            height: 50px;
+            margin-left: -50px;
+            margin-right: 40px;
+        }
+        .search-input {
+            width: 400px;
+            border-radius: 20px;
+            padding-left: 35px;
+        }
+        .search-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6c757d;
+        }
+        .nav-icon {
+            font-size: 1.2rem;
+            color: #6c757d;
+        }
+        .cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            font-size: 0.7rem;
+        }
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu {
+            margin-top: 0;
+        }
+        .dropdown-toggle::after {
+            display: none;
+        }
+        .icons{
+            margin-right: -35px;
+        }
+        .circle-card {
+            width: 200px;
+            text-align: center;
+            margin: 20px;
+        }
+        .circle-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+        .circle-image:hover {
+            transform: scale(1.05);
+        }
+        .circle-title {
+            font-size: 18px;
+            font-weight: 500;
+            color: #333;
+        }
+        .circles-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            margin-top: 80px;
+        }
+        .main-heading {
+            text-align: center;
+            margin-top: 80px;
+            margin-bottom: 20px;
+        }
+        .main-heading h2 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #333;
+        }
+        .faq-container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* FAQ Header */
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: #004d4d; /* Deep teal */
+            margin-bottom: 20px;
+        }
+
+        /* Individual FAQ Items */
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-question {
+            background-color: #009688; /* Teal */
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: #00796b; /* Darker teal hover effect */
+            transform: translateY(-2px);
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 15px;
+            background-color: #f1f7f8; /* Soft light gray */
+            border-left: 4px solid #009688; /* Teal border */
+            border-radius: 0 8px 8px 8px;
+            font-size: 16px;
+            color: #333;
+            margin-top: 5px;
+        }
+
+        .faq-answer.show {
+            display: block;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .footer {
+            background-color: #0d0d0d;
+            color: #736c6c;
+            padding: 40px 20px;
+        }
+        .footer a {
+            text-decoration: none;
+            color: #7d7272;
+            transition: color 0.3s;
+        }
+        .footer a:hover {
+            color: #ffffff;
+        }
+        .social-icons a {
+            color: #f4f1f1;
+            font-size: 20px;
+            margin-right: 10px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #111;
+        }
+        .newsletter-form input {
+            border-radius: 0;
+            border-right: none;
+        }
+        .newsletter-form button {
+            border-radius: 0;
+        }
+        div h5{
+            color: azure;
+        }
+        body {
+            /* background-color: #e8c8df; */
+            color: black;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-image {
+            height: 280px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .product-price {
+            color: black;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+        .section-heading {
+            color: #d81b60;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 120px;
+        }
+        .custom-btn {
+            background-color: #d81b60;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 25px;
+        }
+        .custom-btn:hover {
+            background-color: #ad1457;
+            color: white;
+        }
+        .card-body {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-purple" href="#"><img src="/images/ALAKRITI-removebg-preview.png" alt=""></a>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-4 mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Gifts
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./Birthday_gifts/birthday_gifts_page.html">Birthday</a></li>
+                            <li><a class="dropdown-item" href="./Anniversary/anniversary_gifts_page.html">Anniversary</a></li>
+                            <li><a class="dropdown-item" href="./Anniversary/anniversary_gifts_page.html">Love</a></li>
+                            <li><a class="dropdown-item" href="./index.html">Festivals</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav me-4 mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Accesories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">keychains</a></li>
+                            <li><a class="dropdown-item" href="#">T-shirts</a></li>
+                            <li><a class="dropdown-item" href="#">Caps</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav me-1 mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Art
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Paintings</a></li>
+                            <li><a class="dropdown-item" href="#">Sculpture</a></li>
+                            <li><a class="dropdown-item" href="#">Glass Art</a></li>
+                            <li><a class="dropdown-item" href="#">Frames</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+                <ul class="navbar-nav me-4 mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            
+                        </a>
+                        <ul class="dropdown-menu">
+                            
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Home
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Wall Art</a></li>
+                            <li><a class="dropdown-item" href="#">Home decor</a></li>
+                            <li><a class="dropdown-item" href="#">Lightning</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <div class="position-relative mx-4">
+                    <i class="fas fa-search search-icon"></i>
+                    <input class="form-control search-input" type="search" placeholder="Search for gifts...">
+                </div>
+                
+                <div class="icons d-flex align-items-center gap-4">
+                    <div class="position-relative">
+                        <a href="#"><i class="fas fa-user nav-icon" id="profileIcon" onclick="toggleDropdown()"></i></a>
+                        <ul class="dropdown-menu profile-dropdown" id="profileDropdown">
+                            <li><a class="dropdown-item" href="/login.html" onclick="showPage('login')"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                            <li><a class="dropdown-item" href="/register.html" onclick="showPage('register')"><i class="fas fa-user-plus"></i> Register</a></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="position-relative">
+                        <i class="fas fa-heart nav-icon"></i>
+                    </a>
+                    <a href="#" class="position-relative">
+                        <i class="fas fa-shopping-cart nav-icon"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge">
+                            5
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+
+    <div>
+        <a href="./Birthday_gifts/birthday_gifts_page.html"><video src="./Untitled design_2.mp4" autoplay muted loop ></video></a>
+    </div>
+
+    <div class="main-heading">
+        <h2>Discover Gifts for Every Occasion</h2>
+    </div>
+
+    <div class="circles-container">
+        <div class="circle-card">
+            <a href="/Birthday_gifts/birthday_gifts_page.html"><img src="/images/main_logo.webp" alt="Birthday Gifts" class="circle-image"></a>
+            <div class="circle-title">Birthday Gifts</div>
+        </div>
+        
+        <div class="circle-card">
+            <a href="/Personalized_gifts/personalized_img.html"><img src="/images/image6.webp" alt="Shashank Gifts" class="circle-image"></a>
+            <div class="circle-title">Personalized Gifts</div>
+        </div>
+        
+        <div class="circle-card">
+            <a href="/Baby_gifts/baby_gifts.html"><img src="/images/main_logo (1).webp" alt="Sameer Gifts" class="circle-image"></a>
+            <div class="circle-title">Baby Gifts</div>
+        </div>
+        
+        <div class="circle-card">
+            <a href="/Anniversary/anniversary_gifts_page.html"><img src="/images/image1.webp" alt="Deepak Gifts" class="circle-image"></a>
+            <div class="circle-title">Anniversary Gifts</div>
+        </div>
+    </div>
+
+    <section class="container">
+        <h2 class="section-heading">Festival Gifts</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="./personalize-diwali-gifts-boxes-navratri-gift-box-hamper-basket-sweets-dry-fruits-for-266.webp" alt="Diwali Gifts" class="product-image">
+                    <div class="card-body">
+                        <h2>Diwali Gifts</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="/gifts-under-the-christmas-tree-lights-background.webp" alt="Christmas Gifts" class="product-image">
+                    <div class="card-body">
+                        <h2>Christmas Gifts</h5>
+                        <!-- <p class="product-price">₹1,299</p> -->
+                        <!-- <button class="custom-btn">Add to Cart</button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="/CMC4818-HO-VL_big.webp" alt="Holi Gifts" class="product-image">
+                    <div class="card-body">
+                        <h2>Holi Gifts</h5>
+                        <!-- <p class="product-price">₹999</p> -->
+                        <!-- <button class="custom-btn">Add to Cart</button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="/il_600x600.5878768188_pau8.webp" alt="Eid Gifts" class="product-image">
+                    <div class="card-body">
+                        <h2>Eid Gifts</h5>
+                        <!-- <p class="product-price">₹799</p> -->
+                        <!-- <button class="custom-btn">Add to Cart</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // Profile Dropdown Toggle
+        document.getElementById('profileIcon').addEventListener('click', function(e) {
+            e.stopPropagation();
+            document.getElementById('profileDropdown').classList.toggle('show');
+        });
+    
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            const dropdown = document.getElementById('profileDropdown');
+            if (!e.target.closest('#profileIcon') && dropdown.classList.contains('show')) {
+                dropdown.classList.remove('show');
+            }
+        });
+    </script>
+
+    <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">What is customized gifting?</div>
+            <div class="faq-answer">Customized gifting involves personalizing gifts with names, messages, designs, or photos to make them unique and memorable.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Is there a minimum order quantity?</div>
+            <div class="faq-answer">No, you can order a single customized product. For bulk orders, discounts may apply.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What are your delivery options?</div>
+            <div class="faq-answer">We offer standard, express, and same-day delivery options based on your location.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What payment methods do you accept?</div>
+            <div class="faq-answer">We accept credit/debit cards, UPI, wallets, net banking, and Cash on Delivery (COD).</div>
+        </div>
+
+    </div>
+
+    <script>
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                const isOpen = answer.classList.contains('show');
+
+                // Close other answers
+                document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('show'));
+
+                // Toggle the clicked answer
+                if (!isOpen) {
+                    answer.classList.add('show');
+                }
+            });
+        });
+    </script>
+
+    
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <!-- About Us Section -->
+            <div class="col-md-3">
+                <h5>About Us</h5>
+                <p>Your go-to destination for premium products, exceptional service, and unbeatable deals.</p>
+            </div>
+
+            <!-- Customer Service Section -->
+            <div class="col-md-3">
+                <h5>Customer Service</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="col-md-3">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Best Sellers</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter & Social Section -->
+            <div class="col-md-3">
+                <h5>Stay Connected</h5>
+                <p>Subscribe to our newsletter for exclusive offers.</p>
+                <form class="newsletter-form d-flex">
+                    <input type="email" class="form-control" placeholder="Enter your email" required>
+                    <button class="btn btn-dark" type="submit">Subscribe</button>
+                </form>
+                <div class="social-icons mt-3">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="text-center">
+            <p class="mb-0">&copy; 2024 KalaKriti. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
